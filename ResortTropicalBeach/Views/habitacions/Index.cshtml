@@ -4,14 +4,13 @@
     ViewData["Title"] = "Index";
 }
 
-<h2 class="center">Crear habitaciones para el resort</h2>
-
-<p>
-    <a class="btn btn-primary center" asp-action="Create">Crear Habitación</a>
+    <img class="center" src="~/images/logotb.png" alt="Alternate Text" />
+<p style="margin-bottom:20 px;">
+    <a class="btn btn-primary" asp-action="Create"> <i class="fas fa-plus-circle"></i> Crear Habitación</a>
 </p>
 <table class="table">
     <thead>
-        <tr>
+        <tr style="background-color:lightblue;color:black;">
             <th>
                 @Html.DisplayNameFor(model => model.piso)
             </th>
@@ -27,7 +26,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.disponible)
             </th>
-            <th></th>
+            <th>CRUD</th>
         </tr>
     </thead>
     <tbody>
@@ -49,9 +48,9 @@
                 @Html.DisplayFor(modelItem => item.disponible)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit"></i></a> |
+                <a asp-action="Details" asp-route-id="@item.Id"><i class="fas fa-eye"></i></a> |
+                <a asp-action="Delete" asp-route-id="@item.Id"><i class="fas fa-trash-alt"></i></a>
             </td>
         </tr>
 }

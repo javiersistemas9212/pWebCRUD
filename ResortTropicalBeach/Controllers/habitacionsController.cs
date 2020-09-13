@@ -42,8 +42,6 @@ namespace ResortTropicalBeach.Controllers
             {
                 return NotFound();
             }
-
-
             //forma  1 sp
             var response = new List<habitacion>();
 
@@ -143,8 +141,6 @@ namespace ResortTropicalBeach.Controllers
                         "UPDATE habitacions SET piso = 2, nHabitacion = 201 Where Id = @id",
                         new SqlParameter("@Id", id));
            
-
-
             if (id != habitacion.Id)
             {
                 return NotFound();
